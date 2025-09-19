@@ -10,8 +10,8 @@ This project detects vehicles in a video stream and counts how many cross each l
 
 Here are some screenshots from the project:
 
-![Screenshot 1](images/road_ss1.png)
-![Screenshot 2](images/road_ss2.png)
+![Screenshot 1](images/road_ss11.png)
+![Screenshot 2](images/road_ss12.png)
 
 
 ## Run Locally
