@@ -20,14 +20,27 @@ conda create -n vehicle-count python=3.10
 conda activate vehicle-count
 pip install -r requirements.txt
 python vehicle_detection.py
+```
 
----
+## 🚦 Traffic Light Logic
 
-### 🔹 Step 3. Deploy to Vercel (as a static site)  
-1. Go to [vercel.com](https://vercel.com) and log in with GitHub.  
-2. Click **"New Project" → Import from GitHub**.  
-3. Select your repo (`vehicle-counter`).  
-4. Vercel will deploy it as a static site (it will just show your `README.md` or docs).  
-   - If you want a nicer presentation, add an `index.html` page in your repo (like a mini portfolio page with project details, screenshots, demo video).  
+Vehicle counts are continuously monitored per lane
 
-✅ After deploy, you’ll get a live link like:  
+Every 30 seconds (configurable):
+
+The lane with more vehicles gets the green signal
+
+Other lane gets red, but still receives minimum green time in next cycle
+
+Prevents starvation → ensures fair switching
+
+## 🛠️ Tech Stack
+
+Python 3.10
+
+YOLOv8 (Ultralytics) – object detection
+
+OpenCV – video processing & visualization
+
+
+
